@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="registration" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <link rel="stylesheet" href="CSS/form.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <main class="card">
+            <h2>Register Today</h2>
+            <p>Fill in the data below.</p>
+            <form id="form">
+                <div class="input-container">
+                    <div class="input">
+                        <input type="text" placeholder="Full Name" id="fullName" class="border">
+                        <ion-icon name="alert-circle-outline" class="error-icon"></ion-icon>
+                        <span id="nameValidity"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="E-mail Address" id="email" class="border">                        
+                        <ion-icon name="alert-circle-outline" class="error-icon"></ion-icon>
+                        <span id="emailValidity"></span>
+                    </div>
+                    <div class="input">
+                        <select id="position">
+                            <option value="">Position</option>
+                            <option>Junior Web Developer</option>
+                            <option>Back-end Developer</option>
+                            <option>Machine Learning Engineer</option>
+                            <option>Mobile Developer</option>
+                            <option>Quality Assurance (QA) Engineer</option>
+                        </select>
+                        <ion-icon name="alert-circle-outline" class="error-icon updaEerrorIcon"></ion-icon>
+                        <span id="positionValidity"></span>
+                    </div>  
+                    <div class="input">
+                        <input type="password" placeholder="Password" id="password" class="border">
+                        <ion-icon name="alert-circle-outline" class="error-icon"></ion-icon>
+                        <span id="passValidity"></span>
+                    </div>                                    
+                </div>                
+                <div class="gender-container">
+                    <label id="gender">Gender:</label>    
+                    <div class="gender-input">
+                        <input type="radio" id="male" name="radio" value="male">
+                        <label for="male" class="checked">Male</label>
+                        <input type="radio" id="female" name="radio" value="female">
+                        <label for="female" class="checked">Female</label>
+                        <input type="radio" id="secret" name="radio" value="secret">
+                        <label for="secret" class="checked">Secret</label>
+                    </div>                               
+                </div>
+                <span id="genderValidity"></span>
+                <div class="checkbox">
+                    <input type="checkbox" id="check">
+                    <label for="check">I confirm that all data are correct</label>
+                </div>
+                <span id="checkValidity" class="updateMargin"></span>
+                <div>                   
+                   <input type="submit" value="Register" class="submit"> 
+                </div>                
+            </form>
+        </main>
+        <script src="main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    </body>
+</html>
